@@ -84,4 +84,11 @@
       0 => 'Pixinvent\\Jetstrap\\JetstrapServiceProvider',
     ),
   ),
+  'spatie/laravel-permission' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Spatie\\Permission\\PermissionServiceProvider',
+    ),
+  ),
 );

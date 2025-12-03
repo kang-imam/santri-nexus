@@ -24,6 +24,11 @@ class DatabaseSeeder extends Seeder
       AdminDesaSeeder::class,
       AdminPesantrenSeeder::class,
       WaliSantriSeeder::class,
+      JenisLayananSeeder::class,
+      PenggunaLayananSeeder::class,
+      KartuSantriSeeder::class,
+      KegiatanSeeder::class,
+      AbsensiSeeder::class,
     ]);
   }
 }

@@ -10,16 +10,16 @@
             <span class="app-brand-logo demo">@include('_partials.macros')</span>
             <span class="app-brand-text demo text-white fw-bold ms-2 ps-1">{{ config('variables.templateName') }}</span>
           </a>
-          <p class="footer-text footer-logo-description mb-6">Most developer friendly & highly customisable
-            Admin
-            Dashboard Template.</p>
+          <p class="footer-text footer-logo-description mb-6">
+            Sistem manajemen pesantren yang mudah digunakan dan terintegrasi.
+          </p>
           <form class="footer-form">
-            <label for="footer-email" class="small">Subscribe to newsletter</label>
+            <label for="footer-email" class="small">Berlangganan buletin</label>
             <div class="d-flex mt-1">
               <input type="email" class="form-control rounded-0 rounded-start-bottom rounded-start-top"
-                id="footer-email" placeholder="Your email" />
+                id="footer-email" placeholder="Email Anda" />
               <button type="submit"
-                class="btn btn-primary shadow-none rounded-0 rounded-end-bottom rounded-end-top">Subscribe</button>
+                class="btn btn-primary shadow-none rounded-0 rounded-end-bottom rounded-end-top">Berlangganan</button>
             </div>
           </form>
         </div>
@@ -64,12 +64,14 @@
           </ul>
         </div>
         <div class="col-lg-3 col-md-4">
-          <h6 class="footer-title mb-6">Download our app</h6>
+          <h6 class="footer-title mb-6">
+            Dapatkan aplikasi mobile<br>
+            <i>(coming soon)</i>
+          </h6>
           <a href="javascript:void(0);" class="d-block mb-4"><img
-              src="{{ asset('assets/img/front-pages/landing-page/apple-icon.png') }}" alt="apple icon" /></a>
+              src="{{ asset('assets/img/umum/home/apple-icon.png') }}" alt="apple icon" /></a>
           <a href="javascript:void(0);" class="d-block"><img
-              src="{{ asset('assets/img/front-pages/landing-page/google-play-icon.png') }}"
-              alt="google play icon" /></a>
+              src="{{ asset('assets/img/umum/home/google-play-icon.png') }}" alt="google play icon" /></a>
         </div>
       </div>
     </div>
@@ -84,7 +86,7 @@
         </span>
         <a href="{{ config('variables.creatorUrl') }}" target="_blank"
           class="text-white">{{ config('variables.creatorName') }},</a>
-        <span class="footer-bottom-text"> Made with ❤️ for a better web.</span>
+        <span class="footer-bottom-text">Bersama kami mewujudkan digitalisasi pesantren.</span>
       </div>
       <div>
         <a href="{{ config('variables.githubFreeUrl') }}" class="me-4 text-white" target="_blank">

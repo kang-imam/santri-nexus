@@ -1,8 +1,8 @@
 <?php
 // Variables
 return [
-  "creatorName" => "Pixinvent",
-  "creatorUrl" => "https://pixinvent.com",
+  "creatorName" => "Santri Visioner",
+  "creatorUrl" => "https://santrivisioner.id",
   "templateName" => "SantriNexus",
   "templateSuffix" => "Bootstrap Admin Template",
   "templateVersion" => "3.0.0",

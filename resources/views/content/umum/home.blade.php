@@ -4,7 +4,7 @@
 
 @extends('layouts/layoutMaster')
 
-@section('title', 'Home')
+@section('title', 'Landing - Front Pages')
 
 @section('vendor-style')
   @vite(['resources/assets/vendor/libs/nouislider/nouislider.scss', 'resources/assets/vendor/libs/swiper/swiper.scss'])
@@ -22,7 +22,6 @@
   @vite(['resources/assets/js/front-page-landing.js'])
 @endsection
 
-
 @section('content')
   <div data-bs-spy="scroll" class="scrollspy-example">
     <section id="hero-animation">
@@ -31,25 +30,28 @@
           class="position-absolute top-0 start-50 translate-middle-x object-fit-cover w-100 h-100" data-speed="1" />
         <div class="container">
           <div class="hero-text-box text-center position-relative">
-            <h1 class="text-primary hero-title display-6 fw-extrabold">Satu sistem untuk mengelola Pesantren Anda</h1>
+            <h1 class="text-primary hero-title display-6 fw-extrabold">Platform Manajemen Pesantren Modern dalam Satu
+              Dashboard</h1>
             <h2 class="hero-sub-title h6 mb-6">
-              Sitem pesantren siap pakai & mudah digunakan<br class="d-none d-lg-block" />
-              untuk manajemen data santri.
+              Sistem absensi santri yang fleksibel, terintegrasi, dan mudah digunakan.<br class="d-none d-lg-block" />
+              Didesain khusus untuk keandalan, efisiensi, dan kebutuhan setiap pesantren.
             </h2>
             <div class="landing-hero-btn d-inline-block position-relative">
-              <span class="hero-btn-item position-absolute d-none d-md-flex fw-medium">Gabung sekarang <img
-                  src="{{ asset('assets/img/front-pages/icons/Join-community-arrow.png') }}" alt="Gabung sekarang arrow"
+              <span class="hero-btn-item position-absolute d-none d-md-flex fw-medium">Join community <img
+                  src="{{ asset('assets/img/front-pages/icons/Join-community-arrow.png') }}" alt="Join community arrow"
                   class="scaleX-n1-rtl" /></span>
-              <a href="#homePaketLayanan" class="btn btn-primary btn-lg">Dapatkan akses awal</a>
+              <a href="#landingPricing" class="btn btn-primary btn-lg">Get early access</a>
             </div>
           </div>
           <div id="heroDashboardAnimation" class="hero-animation-img">
             <a href="{{ url('/app/ecommerce/dashboard') }}" target="_blank">
               <div id="heroAnimationImg" class="position-relative hero-dashboard-img">
-                <img src="{{ asset('assets/img/umum/home/hero-dashboard-' . $configData['theme'] . '.png') }}"
+                <img
+                  src="{{ asset('assets/img/front-pages/landing-page/hero-dashboard-' . $configData['theme'] . '.png') }}"
                   alt="hero dashboard" class="animation-img" data-app-light-img="umum/home/hero-dashboard-light.png"
                   data-app-dark-img="umum/home/hero-dashboard-dark.png" />
-                <img src="{{ asset('assets/img/umum/home/hero-elements-' . $configData['theme'] . '.png') }}"
+                <img
+                  src="{{ asset('assets/img/front-pages/landing-page/hero-elements-' . $configData['theme'] . '.png') }}"
                   alt="hero elements" class="position-absolute hero-elements-img animation-img top-0 start-0"
                   data-app-light-img="umum/home/hero-elements-light.png"
                   data-app-dark-img="umum/home/hero-elements-dark.png" />
@@ -60,19 +62,21 @@
       </div>
       <div class="landing-hero-blank"></div>
     </section>
-    <section id="homeFitur" class="section-py landing-features">
+
+    <section id="landingFeatures" class="section-py landing-features">
       <div class="container">
         <div class="text-center mb-4">
-          <span class="badge bg-label-primary">Fitur Berguna</span>
+          <span class="badge bg-label-primary">Fitur Unggulan</span>
         </div>
         <h4 class="text-center mb-1">
-          <span class="position-relative fw-extrabold z-1">Everything you need
+          <span class="position-relative fw-extrabold z-1">Semua yang dibutuhkan pesantren
             <img src="{{ asset('assets/img/front-pages/icons/section-title-icon.png') }}" alt="laptop charging"
               class="section-title-img position-absolute object-fit-contain bottom-0 z-n1" />
           </span>
-          to start your next project
+          untuk mulai digitalisasi absensi dengan mudah dan terjangkau.
         </h4>
-        <p class="text-center mb-12">Not just a set of tools, the package includes ready-to-deploy conceptual application.
+        <p class="text-center mb-12">
+          Lebih dari sekadar alat absensi. SantriNexus adalah fondasi manajemen pesantren modern.
         </p>
         <div class="features-icon-wrapper row gx-0 gy-6 g-sm-12">
           <div class="col-lg-4 col-sm-6 text-center features-icon-box">
@@ -86,9 +90,10 @@
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </div>
-            <h5 class="mb-2">Quality Code</h5>
-            <p class="features-icon-description">Code structure that all developers will easily understand and fall in
-              love with.</p>
+            <h5 class="mb-2">Absensi Fleksibel</h5>
+            <p class="features-icon-description">
+              Setiap pesantren bebas menentukan jenis absensi: harian, kelas, kegiatan, izin, malam, dan lainnya.
+            </p>
           </div>
           <div class="col-lg-4 col-sm-6 text-center features-icon-box">
             <div class="mb-4 text-primary text-center">
@@ -101,8 +106,9 @@
                   fill="currentColor" />
               </svg>
             </div>
-            <h5 class="mb-2">Continuous Updates</h5>
-            <p class="features-icon-description">Free updates for the next 12 months, including new demos and features.
+            <h5 class="mb-2">Multi-Pesantren (Multi-Tenant)</h5>
+            <p class="features-icon-description">
+              Satu platform dapat digunakan oleh banyak pesantren sekaligus dengan data yang tetap terpisah dan aman.
             </p>
           </div>
           <div class="col-lg-4 col-sm-6 text-center features-icon-box">
@@ -116,8 +122,9 @@
                   fill="currentColor" />
               </svg>
             </div>
-            <h5 class="mb-2">Stater-Kit</h5>
-            <p class="features-icon-description">Start your project quickly without having to remove unnecessary features.
+            <h5 class="mb-2">Siap Pakai Tanpa Biaya</h5>
+            <p class="features-icon-description">
+              Fitur inti tersedia secara gratis. Pesantren dapat langsung menggunakan tanpa komitmen langganan.
             </p>
           </div>
           <div class="col-lg-4 col-sm-6 text-center features-icon-box">
@@ -131,8 +138,9 @@
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </div>
-            <h5 class="mb-2">API Ready</h5>
-            <p class="features-icon-description">Just change the endpoint and see your own data loaded within seconds.
+            <h5 class="mb-2">Integrasi Kartu RFID/QR</h5>
+            <p class="features-icon-description">
+              Dukungan untuk absensi cepat dengan kartu santri RFID atau QR yang siap dipakai.
             </p>
           </div>
           <div class="col-lg-4 col-sm-6 text-center features-icon-box">
@@ -147,8 +155,10 @@
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </div>
-            <h5 class="mb-2">Excellent Support</h5>
-            <p class="features-icon-description">An easy-to-follow doc with lots of references and code examples.</p>
+            <h5 class="mb-2">Tata Kelola Data yang Rapi</h5>
+            <p class="features-icon-description">
+              Data santri, aktivitas, dan absensi tersusun dengan struktur modern yang mudah dikelola.
+            </p>
           </div>
           <div class="col-lg-4 col-sm-6 text-center features-icon-box">
             <div class="text-center mb-4 text-primary">
@@ -162,28 +172,30 @@
                   fill="currentColor" />
               </svg>
             </div>
-            <h5 class="mb-2">Well Documented</h5>
-            <p class="features-icon-description">An easy-to-follow doc with lots of references and code examples.</p>
+            <h5 class="mb-2">Dukungan & Dokumentasi</h5>
+            <p class="features-icon-description">
+              Dokumentasi jelas dan dukungan aktif untuk membantu pesantren saat melakukan setup.
+            </p>
           </div>
         </div>
       </div>
     </section>
+
     <section id="landingReviews" class="section-py bg-body landing-reviews pb-0">
       <div class="container">
         <div class="row align-items-center gx-0 gy-4 g-lg-5 mb-5 pb-md-5">
           <div class="col-md-6 col-lg-5 col-xl-3">
             <div class="mb-4">
-              <span class="badge bg-label-primary">Real Customers Reviews</span>
+              <span class="badge bg-label-primary">Testimoni Pengguna</span>
             </div>
             <h4 class="mb-1">
-              <span class="position-relative fw-extrabold z-1">What people say
+              <span class="position-relative fw-extrabold z-1">Apa kata mereka?
                 <img src="{{ asset('assets/img/front-pages/icons/section-title-icon.png') }}" alt="laptop charging"
                   class="section-title-img position-absolute object-fit-contain bottom-0 z-n1" />
               </span>
             </h4>
             <p class="mb-5 mb-md-12">
-              See what our customers have to<br class="d-none d-xl-block" />
-              say about their experience.
+              Lihat bagaimana SantriNexus membantu mempermudah pengelolaan absensi dan aktivitas santri.
             </p>
             <div class="landing-reviews-btns">
               <button id="reviews-previous-btn" class="btn btn-icon btn-label-primary reviews-btn me-3" type="button">
@@ -414,162 +426,109 @@
         </div>
       </div>
     </section>
-    <section id="homeTim" class="section-py landing-team">
+    <section id="landingTeam" class="section-py landing-team">
       <div class="container">
         <div class="text-center mb-4">
-          <span class="badge bg-label-primary">Tim Hebat Kami</span>
+          <span class="badge bg-label-primary">Tim di Balik SantriNexus</span>
         </div>
         <h4 class="text-center mb-1">
-          <span class="position-relative fw-extrabold z-1">Seluruh sistem
+          <span class="position-relative fw-extrabold z-1">Didukung oleh orang-orang
             <img src="{{ asset('assets/img/front-pages/icons/section-title-icon.png') }}" alt="laptop charging"
               class="section-title-img position-absolute object-fit-contain bottom-0 z-n1" />
           </span>
-          didukung oleh Santri
+          yang berdedikasi menghadirkan solusi terbaik bagi pesantren.
         </h4>
-        <p class="text-center mb-md-11 pb-0 pb-xl-12">Sistem dibangun oleh santri dari pondok pesantren</p>
+        <p class="text-center mb-md-11 pb-0 pb-xl-12">Kami membangun SantriNexus dengan fokus pada keandalan, kemudahan,
+          dan kebermanfaatan untuk lembaga pesantren di seluruh Indonesia.</p>
         <div class="row gy-12 mt-2 justify-content-center">
-          <div class="col-lg-4 col-sm-6">
+          <div class="col-lg-3 col-sm-6">
             <div class="card mt-3 mt-lg-0 shadow-none">
               <div class="bg-label-primary border border-bottom-0 border-label-primary position-relative team-image-box">
                 <img src="{{ asset('assets/img/umum/home/imamul.png') }}"
                   class="position-absolute card-img-position bottom-0 start-50" alt="human image" />
               </div>
               <div class="card-body border border-top-0 border-label-primary text-center">
-                <h5 class="card-title mb-0">Imamul Mutaqin Al Hanif</h5>
-                <p class="text-body-secondary mb-0">
-                  {{-- Developer SantriNexus --}}
-                  Founder Santri Visioner
-                </p>
+                <h5 class="card-title mb-0">Imamul Mutaqin A</h5>
+                <p class="text-body-secondary mb-0">Founder & Product Architect</p>
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-sm-6">
+          <div class="col-lg-3 col-sm-6">
             <div class="card mt-3 mt-lg-0 shadow-none">
-              <div
-                class="bg-label-secondary border border-bottom-0 border-label-danger position-relative team-image-box">
+              <div class="bg-label-info border border-bottom-0 border-label-info position-relative team-image-box">
                 <img src="{{ asset('assets/img/umum/home/syahrul.png') }}"
                   class="position-absolute card-img-position bottom-0 start-50" alt="human image" />
               </div>
-              <div class="card-body border border-top-0 border-label-danger text-center">
+              <div class="card-body border border-top-0 border-label-info text-center">
                 <h5 class="card-title mb-0">Syahrul Maulana</h5>
                 <p class="text-body-secondary mb-0">IT Provisioning</p>
               </div>
             </div>
           </div>
+          {{-- <div class="col-lg-3 col-sm-6">
+            <div class="card mt-3 mt-lg-0 shadow-none">
+              <div class="bg-label-danger border border-bottom-0 border-label-danger position-relative team-image-box">
+                <img src="{{ asset('assets/img/umum/home/imamul.png') }}"
+                  class="position-absolute card-img-position bottom-0 start-50" alt="human image" />
+              </div>
+              <div class="card-body border border-top-0 border-label-danger text-center">
+                <h5 class="card-title mb-0">Farhan Akbar</h5>
+                <p class="text-body-secondary mb-0">Lead Developer</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="card mt-3 mt-lg-0 shadow-none">
+              <div class="bg-label-success border border-bottom-0 border-label-success position-relative team-image-box">
+                <img src="{{ asset('assets/img/umum/home/syahrul.png') }}"
+                  class="position-absolute card-img-position bottom-0 start-50" alt="human image" />
+              </div>
+              <div class="card-body border border-top-0 border-label-success text-center">
+                <h5 class="card-title mb-0">Nadira Fathima</h5>
+                <p class="text-body-secondary mb-0">Partnership Manager</p>
+              </div>
+            </div>
+          </div> --}}
         </div>
       </div>
     </section>
-    <section id="homePaketLayanan" class="section-py bg-body landing-pricing">
+    <section id="landingPricing" class="section-py bg-body landing-pricing">
       <div class="container">
         <div class="text-center mb-4">
-          <span class="badge bg-label-primary">Paket Layanan</span>
+          <span class="badge bg-label-primary">Paket Harga</span>
         </div>
         <h4 class="text-center mb-1">
-          <span class="position-relative fw-extrabold z-1">Tailored pricing plans
+          <span class="position-relative fw-extrabold z-1">Paket yang dirancang khusus
             <img src="{{ asset('assets/img/front-pages/icons/section-title-icon.png') }}" alt="laptop charging"
               class="section-title-img position-absolute object-fit-contain bottom-0 z-n1" />
           </span>
-          designed for you
+          untuk kebutuhan beragam pesantren.
         </h4>
         <p class="text-center pb-2 mb-7">
-          Semua paket mencakup lebih dari 40 alat dan fitur canggih untuk pendataan Pesantren.
-          <br />
-          Pilih paket terbaik yang sesuai dengan kebutuhan Pesantren atau coba paket <b>GRATIS</b> terlebih
-          dahulu
+          Fitur inti gratis, dan fitur premium hanya bagi pesantren yang membutuhkannya.
+          Santri dapat langsung memakai SantriNexus tanpa biaya berlangganan.
+          Bayar Sekali untuk Kartu & Perangkat Pendukung
+          Kartu santri RFID/QR mulai dari harga terjangkau sesuai kebutuhan pesantren.
         </p>
         <div class="text-center mb-12">
           <div class="position-relative d-inline-block pt-3 pt-md-0">
             <label class="switch switch-sm switch-primary me-0">
-              <span class="switch-label fs-6 text-body me-3">Bayar Bulanan</span>
+              <span class="switch-label fs-6 text-body me-3">Pay Monthly</span>
               <input type="checkbox" class="switch-input price-duration-toggler" checked />
               <span class="switch-toggle-slider">
                 <span class="switch-on"></span>
                 <span class="switch-off"></span>
               </span>
-              <span class="switch-label fs-6 text-body ms-3">Bayar Tahunan</span>
+              <span class="switch-label fs-6 text-body ms-3">Pay Annual</span>
             </label>
             <div class="pricing-plans-item position-absolute d-flex">
               <img src="{{ asset('assets/img/front-pages/icons/pricing-plans-arrow.png') }}" alt="pricing plans arrow"
                 class="scaleX-n1-rtl" />
-              <span class="fw-medium mt-2 ms-1">Hemat 25%</span>
+              <span class="fw-medium mt-2 ms-1"> Save 25%</span>
             </div>
           </div>
         </div>
         <div class="row g-6 pt-lg-5">
-          <div class="col-xl-4 col-lg-6">
-            <div class="card">
-              <div class="card-header">
-                <div class="text-center">
-                  <img src="{{ asset('assets/img/front-pages/icons/plane.png') }}" alt="plane icon"
-                    class="mb-8 pb-2" />
-                  <h4 class="mb-0">Santri Pro</h4>
-                  <div class="d-flex align-items-center justify-content-center">
-                    <span class="price-monthly h2 text-primary fw-extrabold mb-0">Coming Soon</span>
-                    {{-- <span class="price-monthly h2 text-primary fw-extrabold mb-0">Rp50.000</span> --}}
-                    <span class="price-yearly h2 text-primary fw-extrabold mb-0 d-none">Coming Soon</span>
-                    {{-- <span class="price-yearly h2 text-primary fw-extrabold mb-0 d-none">Rp37.500</span> --}}
-                    {{-- <sub class="h6 text-body-secondary mb-n1 ms-1">/bulan</sub> --}}
-                  </div>
-                  <div class="position-relative pt-2">
-                    <div class="price-yearly text-body-secondary price-yearly-toggle d-none">Coming Soon</div>
-                    {{-- <div class="price-yearly text-body-secondary price-yearly-toggle d-none">Rp450.000 / tahun</div> --}}
-                  </div>
-                </div>
-              </div>
-              <div class="card-body">
-                <ul class="list-unstyled pricing-list">
-                  <li>
-                    <h6 class="d-flex align-items-center mb-3">
-                      <span class="badge badge-center rounded-pill bg-label-primary p-0 me-3">
-                        <i class="icon-base ti tabler-check icon-12px"></i>
-                      </span>
-                      2000 Data Santri
-                    </h6>
-                  </li>
-                  <li>
-                    <h6 class="d-flex align-items-center mb-3">
-                      <span class="badge badge-center rounded-pill bg-label-primary p-0 me-3">
-                        <i class="icon-base ti tabler-check icon-12px"></i>
-                      </span>
-                      Fitur Absensi RFID & QR Code
-                    </h6>
-                  </li>
-                  <li>
-                    <h6 class="d-flex align-items-center mb-3">
-                      <span class="badge badge-center rounded-pill bg-label-primary p-0 me-3">
-                        <i class="icon-base ti tabler-check icon-12px"></i>
-                      </span>
-                      Rekap Absensi
-                    </h6>
-                  </li>
-                  <li>
-                    <h6 class="d-flex align-items-center mb-3">
-                      <span class="badge badge-center rounded-pill bg-label-primary p-0 me-3"><i
-                          class="icon-base ti tabler-check icon-12px"></i></span>
-                      Pencarian Dasar
-                    </h6>
-                  </li>
-                  <li>
-                    <h6 class="d-flex align-items-center mb-3">
-                      <span class="badge badge-center rounded-pill bg-label-primary p-0 me-3"><i
-                          class="icon-base ti tabler-check icon-12px"></i></span>
-                      Analisis Data
-                    </h6>
-                  </li>
-                  <li>
-                    <h6 class="d-flex align-items-center mb-3">
-                      <span class="badge badge-center rounded-pill bg-label-primary p-0 me-3"><i
-                          class="icon-base ti tabler-check icon-12px"></i></span>
-                      Basic Support
-                    </h6>
-                  </li>
-                </ul>
-                <div class="d-grid mt-8">
-                  <a href="{{ url('/front-pages/payment') }}" class="btn btn-label-primary">Get Started</a>
-                </div>
-              </div>
-            </div>
-          </div>
           <div class="col-xl-4 col-lg-6">
             <div class="card border border-primary shadow-xl">
               <div class="card-header">
@@ -578,12 +537,12 @@
                     class="mb-8 pb-2" />
                   <h4 class="mb-0">Santri Basic</h4>
                   <div class="d-flex align-items-center justify-content-center">
-                    <span class="price-monthly h2 text-primary fw-extrabold mb-0">Rp0</span>
-                    <span class="price-yearly h2 text-primary fw-extrabold mb-0 d-none">Rp0</span>
-                    <sub class="h6 text-body-secondary mb-n1 ms-1">/bulan</sub>
+                    <span class="price-monthly h2 text-primary fw-extrabold mb-0">Rp 0</span>
+                    <span class="price-yearly h2 text-primary fw-extrabold mb-0 d-none">Rp 0</span>
+                    <sub class="h6 text-body-secondary mb-n1 ms-1">/mo</sub>
                   </div>
                   <div class="position-relative pt-2">
-                    <div class="price-yearly text-body-secondary price-yearly-toggle d-none">Rp 0 / tahun</div>
+                    <div class="price-yearly text-body-secondary price-yearly-toggle d-none">Rp 0 / year</div>
                   </div>
                 </div>
               </div>
@@ -591,47 +550,51 @@
                 <ul class="list-unstyled pricing-list">
                   <li>
                     <h6 class="d-flex align-items-center mb-3">
-                      <span class="badge badge-center rounded-pill bg-primary p-0 me-3">
-                        <i class="icon-base ti tabler-check icon-12px"></i>
-                      </span>
-                      500 Data Santri
-                    </h6>
-                  </li>
-                  <li>
-                    <h6 class="d-flex align-items-center mb-3">
-                      <span class="badge badge-center rounded-pill bg-primary p-0 me-3">
-                        <i class="icon-base ti tabler-check icon-12px"></i>
-                      </span>
-                      Fitur Absensi RFID & QR Code
-                    </h6>
-                  </li>
-                  <li>
-                    <h6 class="d-flex align-items-center mb-3">
-                      <span class="badge badge-center rounded-pill bg-primary p-0 me-3">
-                        <i class="icon-base ti tabler-check icon-12px"></i>
-                      </span>
-                      Rekap Absensi
+                      <span class="badge badge-center rounded-pill bg-primary p-0 me-3"><i
+                          class="icon-base ti tabler-check icon-12px"></i></span>
+                      Absensi fleksibel
                     </h6>
                   </li>
                   <li>
                     <h6 class="d-flex align-items-center mb-3">
                       <span class="badge badge-center rounded-pill bg-primary p-0 me-3"><i
                           class="icon-base ti tabler-check icon-12px"></i></span>
-                      Pencarian Dasar
+                      Dashboard kehadiran
                     </h6>
                   </li>
                   <li>
                     <h6 class="d-flex align-items-center mb-3">
                       <span class="badge badge-center rounded-pill bg-primary p-0 me-3"><i
                           class="icon-base ti tabler-check icon-12px"></i></span>
-                      Analisis Data
+                      Manajemen data santri
                     </h6>
                   </li>
                   <li>
                     <h6 class="d-flex align-items-center mb-3">
                       <span class="badge badge-center rounded-pill bg-primary p-0 me-3"><i
                           class="icon-base ti tabler-check icon-12px"></i></span>
-                      Basic Support
+                      Penggunaan multi-pesantren
+                    </h6>
+                  </li>
+                  <li>
+                    <h6 class="d-flex align-items-center mb-3">
+                      <span class="badge badge-center rounded-pill bg-primary p-0 me-3"><i
+                          class="icon-base ti tabler-check icon-12px"></i></span>
+                      Rekap dasar absensi
+                    </h6>
+                  </li>
+                  <li>
+                    <h6 class="d-flex align-items-center mb-3">
+                      <span class="badge badge-center rounded-pill bg-primary p-0 me-3"><i
+                          class="icon-base ti tabler-check icon-12px"></i></span>
+                      Tanpa batasan jumlah santri
+                    </h6>
+                  </li>
+                  <li>
+                    <h6 class="d-flex align-items-center mb-3">
+                      <span class="badge badge-center rounded-pill bg-primary p-0 me-3"><i
+                          class="icon-base ti tabler-check icon-12px"></i></span>
+                      Dukungan kartu RFID/QR
                     </h6>
                   </li>
                 </ul>
@@ -645,19 +608,17 @@
             <div class="card">
               <div class="card-header">
                 <div class="text-center">
-                  <img src="{{ asset('assets/img/front-pages/icons/shuttle-rocket.png') }}" alt="shuttle rocket icon"
+                  <img src="{{ asset('assets/img/front-pages/icons/plane.png') }}" alt="plane icon"
                     class="mb-8 pb-2" />
-                  <h4 class="mb-0">Santri ProMax</h4>
+                  <h4 class="mb-0">Santri Pro</h4>
+                  <p class="mb-0"><i>(Coming Soon)</i></p>
                   <div class="d-flex align-items-center justify-content-center">
-                    <span class="price-monthly h2 text-primary fw-extrabold mb-0">Coming Soon</span>
-                    {{-- <span class="price-monthly h2 text-primary fw-extrabold mb-0">Rp50.000</span> --}}
-                    <span class="price-yearly h2 text-primary fw-extrabold mb-0 d-none">Coming Soon</span>
-                    {{-- <span class="price-yearly h2 text-primary fw-extrabold mb-0 d-none">Rp37.500</span> --}}
-                    {{-- <sub class="h6 text-body-secondary mb-n1 ms-1">/bulan</sub> --}}
+                    <span class="price-monthly h2 text-primary fw-extrabold mb-0">Rp XX.XXX</span>
+                    <span class="price-yearly h2 text-primary fw-extrabold mb-0 d-none">Rp XX.XXX</span>
+                    <sub class="h6 text-body-secondary mb-n1 ms-1">/mo</sub>
                   </div>
                   <div class="position-relative pt-2">
-                    <div class="price-yearly text-body-secondary price-yearly-toggle d-none">Coming Soon</div>
-                    {{-- <div class="price-yearly text-body-secondary price-yearly-toggle d-none">Rp450.000 / tahun</div> --}}
+                    <div class="price-yearly text-body-secondary price-yearly-toggle d-none">Rp XX.XXX / year</div>
                   </div>
                 </div>
               </div>
@@ -665,47 +626,134 @@
                 <ul class="list-unstyled pricing-list">
                   <li>
                     <h6 class="d-flex align-items-center mb-3">
-                      <span class="badge badge-center rounded-pill bg-label-primary p-0 me-3">
-                        <i class="icon-base ti tabler-check icon-12px"></i>
-                      </span>
-                      Tanpa Batas Data Santri
-                    </h6>
-                  </li>
-                  <li>
-                    <h6 class="d-flex align-items-center mb-3">
-                      <span class="badge badge-center rounded-pill bg-label-primary p-0 me-3">
-                        <i class="icon-base ti tabler-check icon-12px"></i>
-                      </span>
-                      Fitur Absensi RFID & QR Code
-                    </h6>
-                  </li>
-                  <li>
-                    <h6 class="d-flex align-items-center mb-3">
-                      <span class="badge badge-center rounded-pill bg-label-primary p-0 me-3">
-                        <i class="icon-base ti tabler-check icon-12px"></i>
-                      </span>
-                      Rekap Absensi
+                      <span class="badge badge-center rounded-pill bg-label-primary p-0 me-3"><i
+                          class="icon-base ti tabler-check icon-12px"></i></span>
+                      Semua di paket Gratis
                     </h6>
                   </li>
                   <li>
                     <h6 class="d-flex align-items-center mb-3">
                       <span class="badge badge-center rounded-pill bg-label-primary p-0 me-3"><i
                           class="icon-base ti tabler-check icon-12px"></i></span>
-                      Pencarian Dasar
+                      Rekap lanjutan & laporan mendalam
                     </h6>
                   </li>
                   <li>
                     <h6 class="d-flex align-items-center mb-3">
                       <span class="badge badge-center rounded-pill bg-label-primary p-0 me-3"><i
                           class="icon-base ti tabler-check icon-12px"></i></span>
-                      Analisis Data
+                      Notifikasi otomatis (WA/Email)
                     </h6>
                   </li>
                   <li>
                     <h6 class="d-flex align-items-center mb-3">
                       <span class="badge badge-center rounded-pill bg-label-primary p-0 me-3"><i
                           class="icon-base ti tabler-check icon-12px"></i></span>
-                      Basic Support
+                      Izin & pengajuan mandiri
+                    </h6>
+                  </li>
+                  <li>
+                    <h6 class="d-flex align-items-center mb-3">
+                      <span class="badge badge-center rounded-pill bg-label-primary p-0 me-3"><i
+                          class="icon-base ti tabler-check icon-12px"></i></span>
+                      Absensi event/kegiatan khusus
+                    </h6>
+                  </li>
+                  <li>
+                    <h6 class="d-flex align-items-center mb-3">
+                      <span class="badge badge-center rounded-pill bg-label-primary p-0 me-3"><i
+                          class="icon-base ti tabler-check icon-12px"></i></span>
+                      Pengaturan lebih detail & custom
+                    </h6>
+                  </li>
+                  <li>
+                    <h6 class="d-flex align-items-center mb-3">
+                      <span class="badge badge-center rounded-pill bg-label-primary p-0 me-3"><i
+                          class="icon-base ti tabler-check icon-12px"></i></span>
+                      Akses multi-admin
+                    </h6>
+                  </li>
+                  <li>
+                    <h6 class="d-flex align-items-center mb-3">
+                      <span class="badge badge-center rounded-pill bg-label-primary p-0 me-3"><i
+                          class="icon-base ti tabler-check icon-12px"></i></span>
+                      Export data ke Excel/CSV
+                    </h6>
+                  </li>
+                </ul>
+                <div class="d-grid mt-8">
+                  <a href="{{ url('/front-pages/payment') }}" class="btn btn-label-primary">Get Started</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6">
+            <div class="card">
+              <div class="card-header">
+                <div class="text-center">
+                  <img src="{{ asset('assets/img/front-pages/icons/shuttle-rocket.png') }}" alt="shuttle rocket icon"
+                    class="mb-8 pb-2" />
+                  <h4 class="mb-0">Santri Enterprise</h4>
+                  <p class="mb-0"><i>(Coming Soon)</i></p>
+                  <div class="d-flex align-items-center justify-content-center">
+                    <span class="price-monthly h2 text-primary fw-extrabold mb-0">Rp XX.XXX</span>
+                    <span class="price-yearly h2 text-primary fw-extrabold mb-0 d-none">Rp XX.XXX</span>
+                    <sub class="h6 text-body-secondary mb-n1 ms-1">/mo</sub>
+                  </div>
+                  <div class="position-relative pt-2">
+                    <div class="price-yearly text-body-secondary price-yearly-toggle d-none">Rp XX.XXX / year</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <ul class="list-unstyled pricing-list">
+                  <li>
+                    <h6 class="d-flex align-items-center mb-3">
+                      <span class="badge badge-center rounded-pill bg-label-primary p-0 me-3"><i
+                          class="icon-base ti tabler-check icon-12px"></i></span>
+                      Semua di Paket Pro
+                    </h6>
+                  </li>
+                  <li>
+                    <h6 class="d-flex align-items-center mb-3">
+                      <span class="badge badge-center rounded-pill bg-label-primary p-0 me-3"><i
+                          class="icon-base ti tabler-check icon-12px"></i></span>
+                      Integrasi sistem yayasan
+                    </h6>
+                  </li>
+                  <li>
+                    <h6 class="d-flex align-items-center mb-3">
+                      <span class="badge badge-center rounded-pill bg-label-primary p-0 me-3"><i
+                          class="icon-base ti tabler-check icon-12px"></i></span>
+                      Modul tambahan sesuai kebutuhan
+                    </h6>
+                  </li>
+                  <li>
+                    <h6 class="d-flex align-items-center mb-3">
+                      <span class="badge badge-center rounded-pill bg-label-primary p-0 me-3"><i
+                          class="icon-base ti tabler-check icon-12px"></i></span>
+                      Dukungan prioritas
+                    </h6>
+                  </li>
+                  <li>
+                    <h6 class="d-flex align-items-center mb-3">
+                      <span class="badge badge-center rounded-pill bg-label-primary p-0 me-3"><i
+                          class="icon-base ti tabler-check icon-12px"></i></span>
+                      Onboarding khusus
+                    </h6>
+                  </li>
+                  <li>
+                    <h6 class="d-flex align-items-center mb-3">
+                      <span class="badge badge-center rounded-pill bg-label-primary p-0 me-3"><i
+                          class="icon-base ti tabler-check icon-12px"></i></span>
+                      Ruang server & penyimpanan lebih besar
+                    </h6>
+                  </li>
+                  <li>
+                    <h6 class="d-flex align-items-center mb-3">
+                      <span class="badge badge-center rounded-pill bg-label-primary p-0 me-3"><i
+                          class="icon-base ti tabler-check icon-12px"></i></span>
+                      API & akses pengembangan
                     </h6>
                   </li>
                 </ul>
@@ -735,10 +783,9 @@
                       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
                 </div>
-                <h3 class="mb-0">7.1k+</h3>
+                <h3 class="mb-0">1.200+</h3>
                 <p class="fw-medium mb-0">
-                  Support Tickets<br />
-                  Resolved
+                  Pesantren yang telah mencoba atau tertarik menggunakan SantriNexus
                 </p>
               </div>
             </div>
@@ -759,10 +806,9 @@
                     </g>
                   </svg>
                 </div>
-                <h3 class="mb-0">50k+</h3>
+                <h3 class="mb-0">30.000+</h3>
                 <p class="fw-medium mb-0">
-                  Join creatives<br />
-                  community
+                  Data santri yang telah dikelola melalui platform
                 </p>
               </div>
             </div>
@@ -783,10 +829,9 @@
                       fill="currentColor" />
                   </svg>
                 </div>
-                <h3 class="mb-0">4.8/5</h3>
+                <h3 class="mb-0">9,99 / 10</h3>
                 <p class="fw-medium mb-0">
-                  Highly Rated<br />
-                  Products
+                  Tingkat kepuasan pengguna terhadap kemudahan penggunaan
                 </p>
               </div>
             </div>
@@ -807,8 +852,7 @@
                 </div>
                 <h3 class="mb-0">100%</h3>
                 <p class="fw-medium mb-0">
-                  Money Back<br />
-                  Guarantee
+                  Fitur inti gratis tanpa biaya langganan
                 </p>
               </div>
             </div>
@@ -823,17 +867,18 @@
         </div>
         <h4 class="text-center mb-1">
           Pertanyaan yang
-          <span class="position-relative fw-extrabold z-1">sering diajukan
+          <span class="position-relative fw-extrabold z-1">Sering Diajukan
             <img src="{{ asset('assets/img/front-pages/icons/section-title-icon.png') }}" alt="laptop charging"
               class="section-title-img position-absolute object-fit-contain bottom-0 z-n1" />
           </span>
         </h4>
-        <p class="text-center mb-12 pb-md-4">Telusuri Tanya Jawab ini untuk menemukan jawaban atas pertanyaan yang sering
-          diajukan.</p>
+        <p class="text-center mb-12 pb-md-4">
+          Temukan jawaban atas pertanyaan umum seputar penggunaan SantriNexus.
+        </p>
         <div class="row gy-12 align-items-center">
           <div class="col-lg-5">
             <div class="text-center">
-              <img src="{{ asset('assets/img/umum/home/santri_laptop.png') }}" alt="faq boy with logos"
+              <img src="{{ asset('assets/img/umum/home/santri-laptop.png') }}" alt="faq boy with logos"
                 class="faq-image" />
             </div>
           </div>
@@ -842,74 +887,132 @@
               <div class="card accordion-item">
                 <h2 class="accordion-header" id="headingOne">
                   <button type="button" class="accordion-button" data-bs-toggle="collapse"
-                    data-bs-target="#accordionOne" aria-expanded="true" aria-controls="accordionOne">Do you charge for
-                    each upgrade?</button>
+                    data-bs-target="#accordionOne" aria-expanded="true" aria-controls="accordionOne">
+                    Apakah SantriNexus benar-benar gratis?
+                  </button>
                 </h2>
 
                 <div id="accordionOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">Lemon drops chocolate cake gummies carrot cake chupa chups muffin topping.
-                    Sesame snaps icing marzipan gummi bears macaroon dragée danish caramels powder. Bear claw dragée
-                    pastry topping soufflé. Wafer gummi bears marshmallow pastry pie.</div>
+                  <div class="accordion-body">
+                    Ya. Fitur inti seperti absensi santri, manajemen data, dan dashboard dasar dapat digunakan 100% gratis
+                    tanpa biaya langganan. Pendanaan operasional berasal dari penjualan kartu santri RFID/QR.
+                  </div>
                 </div>
               </div>
               <div class="card accordion-item">
                 <h2 class="accordion-header" id="headingTwo">
                   <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
-                    data-bs-target="#accordionTwo" aria-expanded="false" aria-controls="accordionTwo">Do I need to
-                    purchase a license for each website?</button>
+                    data-bs-target="#accordionTwo" aria-expanded="false" aria-controls="accordionTwo">
+                    Jika ada pembaruan aplikasi, apakah saya perlu membayar?
+                  </button>
                 </h2>
                 <div id="accordionTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                   data-bs-parent="#accordionExample">
-                  <div class="accordion-body">Dessert ice cream donut oat cake jelly-o pie sugar plum cheesecake. Bear
-                    claw dragée oat cake dragée ice cream halvah tootsie roll. Danish cake oat cake pie macaroon tart
-                    donut gummies. Jelly beans candy canes carrot cake. Fruitcake chocolate chupa chups.</div>
+                  <div class="accordion-body">
+                    Tidak. Semua pembaruan fitur inti diberikan secara gratis untuk seluruh pengguna.
+                    Hanya fitur premium tertentu yang memerlukan paket berlangganan.
+                  </div>
                 </div>
               </div>
               <div class="card accordion-item active">
                 <h2 class="accordion-header" id="headingThree">
                   <button type="button" class="accordion-button" data-bs-toggle="collapse"
-                    data-bs-target="#accordionThree" aria-expanded="false" aria-controls="accordionThree">What is
-                    regular
-                    license?</button>
+                    data-bs-target="#accordionThree" aria-expanded="false" aria-controls="accordionThree">
+                    Apakah saya harus membeli kartu RFID/QR dari SantriNexus?
+                  </button>
                 </h2>
                 <div id="accordionThree" class="accordion-collapse collapse show" aria-labelledby="headingThree"
                   data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    Regular license can be used for end products that do not charge users for access or service(access is
-                    free and there will be no monthly subscription fee). Single regular license can be used for single end
-                    product and end product can be used by you or your client. If you want to sell end product to multiple
-                    clients then you will need to purchase separate license for each client. The same rule applies if you
-                    want to use the same end product on multiple domains(unique setup).
-                    For more info on regular license you can check official description.
+                    Tidak wajib, tetapi sangat direkomendasikan.
+                    Kartu resmi SantriNexus dijamin kompatibel, teruji, dan mudah digunakan.
+                    Pesantren boleh menggunakan kartu sendiri, namun kompatibilitasnya tidak dapat dijamin 100%.
                   </div>
                 </div>
               </div>
               <div class="card accordion-item">
                 <h2 class="accordion-header" id="headingFour">
                   <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
-                    data-bs-target="#accordionFour" aria-expanded="false" aria-controls="accordionFour">What is
-                    extended
-                    license?</button>
+                    data-bs-target="#accordionFour" aria-expanded="false" aria-controls="accordionFour">
+                    Apakah data antar pesantren saling terpisah?
+                  </button>
                 </h2>
                 <div id="accordionFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                   data-bs-parent="#accordionExample">
-                  <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis et aliquid
-                    quaerat possimus maxime! Mollitia reprehenderit neque repellat deleniti delectus architecto dolorum
-                    maxime, blanditiis earum ea, incidunt quam possimus cumque.</div>
+                  <div class="accordion-body">
+                    Ya. SantriNexus menggunakan arsitektur multi-tenant, sehingga data setiap pesantren terisolasi dan
+                    aman.
+                    Pengurus pesantren hanya dapat mengakses data milik pesantren mereka sendiri.
+                  </div>
                 </div>
               </div>
               <div class="card accordion-item">
                 <h2 class="accordion-header" id="headingFive">
                   <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
-                    data-bs-target="#accordionFive" aria-expanded="false" aria-controls="accordionFive">Which license
-                    is
-                    applicable for SASS application?</button>
+                    data-bs-target="#accordionFive" aria-expanded="false" aria-controls="accordionFive">
+                    Apa saja yang termasuk dalam paket premium?
+                  </button>
                 </h2>
                 <div id="accordionFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                   data-bs-parent="#accordionExample">
-                  <div class="accordion-body">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi molestias
-                    exercitationem ab cum nemo facere voluptates veritatis quia, eveniet veniam at et repudiandae mollitia
-                    ipsam quasi labore enim architecto non!</div>
+                  <div class="accordion-body">
+                    Paket premium mencakup fitur lanjutan seperti:
+                    Rekap otomatis dan laporan mendalam
+                    Notifikasi (WA/Email)*
+                    Izin digital
+                    Absensi acara/kegiatan
+                    Manajemen admin yang lebih fleksibel
+                    Export data ke Excel/CSV
+                    *Tergantung integrasi pihak ketiga
+                  </div>
+                </div>
+              </div>
+              <div class="card accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                  <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                    data-bs-target="#accordionFive" aria-expanded="false" aria-controls="accordionFive">
+                    Apakah cocok untuk pesantren kecil?
+                  </button>
+                </h2>
+                <div id="accordionFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    Sangat cocok.
+                    SantriNexus dirancang agar bisa digunakan oleh pesantren besar maupun kecil tanpa biaya awal.
+                    Cukup daftarkan pesantren dan mulai gunakan fitur gratis.
+                  </div>
+                </div>
+              </div>
+              <div class="card accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                  <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                    data-bs-target="#accordionFive" aria-expanded="false" aria-controls="accordionFive">
+                    Apakah SantriNexus bisa diintegrasikan dengan sistem lain?
+                  </button>
+                </h2>
+                <div id="accordionFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    Bisa.
+                    SantriNexus mendukung integrasi melalui API, terutama untuk paket Enterprise atau kebutuhan yayasan
+                    besar.
+                  </div>
+                </div>
+              </div>
+              <div class="card accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                  <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                    data-bs-target="#accordionFive" aria-expanded="false" aria-controls="accordionFive">
+                    Apakah ada batasan jumlah santri?
+                  </button>
+                </h2>
+                <div id="accordionFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    Tidak.
+                    Semua pesantren bisa menggunakan SantriNexus untuk jumlah santri tanpa batas, termasuk untuk paket
+                    gratis.
+                  </div>
                 </div>
               </div>
             </div>
@@ -925,8 +1028,9 @@
       <div class="container">
         <div class="row align-items-center gy-12">
           <div class="col-lg-6 text-start text-sm-center text-lg-start">
-            <h3 class="cta-title text-primary fw-bold mb-1">Ready to Get Started?</h3>
-            <h5 class="text-body mb-8">Start your project with a 14-day free trial</h5>
+            <h3 class="cta-title text-primary fw-bold mb-1">Siap Mentransformasi Pesantren Anda?</h3>
+            <h5 class="text-body mb-8">Mulai gunakan SantriNexus hari ini — gratis, cepat, dan tanpa komitmen apa pun.
+              Digitalisasi absensi santri hanya dalam hitungan menit!</h5>
             <a href="{{ url('/front-pages/payment') }}" class="btn btn-lg btn-primary">Get Started</a>
           </div>
           <div class="col-lg-6 pt-lg-12 text-center text-lg-end">
@@ -939,22 +1043,24 @@
     <section id="landingContact" class="section-py bg-body landing-contact">
       <div class="container">
         <div class="text-center mb-4">
-          <span class="badge bg-label-primary">Contact US</span>
+          <span class="badge bg-label-primary">Hubungi Kami</span>
         </div>
         <h4 class="text-center mb-1">
-          <span class="position-relative fw-extrabold z-1">Let's work
+          <span class="position-relative fw-extrabold z-1">Mari bekerja sama
             <img src="{{ asset('assets/img/front-pages/icons/section-title-icon.png') }}" alt="laptop charging"
               class="section-title-img position-absolute object-fit-contain bottom-0 z-n1" />
           </span>
-          together
+          membangun pesantren yang lebih modern.
         </h4>
-        <p class="text-center mb-12 pb-md-4">Any question or remark? just write us a message</p>
+        <p class="text-center mb-12 pb-md-4">
+          Ada pertanyaan atau butuh bantuan? Tinggalkan pesan untuk kami.
+        </p>
         <div class="row g-6">
           <div class="col-lg-5">
             <div class="contact-img-box position-relative border p-2 h-100">
               <img src="{{ asset('assets/img/front-pages/icons/contact-border.png') }}" alt="contact border"
                 class="contact-border-img position-absolute d-none d-lg-block scaleX-n1-rtl" />
-              <img src="{{ asset('assets/img/umum/home/santri_admin.png') }}" alt="contact customer service"
+              <img src="{{ asset('assets/img/umum/home/santri-admin.png') }}" alt="contact customer service"
                 class="contact-img w-100 scaleX-n1-rtl" />
               <div class="p-4 pb-2">
                 <div class="row g-4">
@@ -975,8 +1081,9 @@
                       <div class="badge bg-label-success rounded p-1_5 me-3"><i
                           class="icon-base ti tabler-phone-call icon-lg"></i></div>
                       <div>
-                        <p class="mb-0">Phone</p>
-                        <h6 class="mb-0"><a href="tel:+1234-568-963" class="text-heading">+1234 568 963</a></h6>
+                        <p class="mb-0">Telepon / WhatsApp</p>
+                        <h6 class="mb-0"><a href="tel:+62-85-186-651-318" class="text-heading">+62 85 186 651 318</a>
+                        </h6>
                       </div>
                     </div>
                   </div>
@@ -987,26 +1094,26 @@
           <div class="col-lg-7">
             <div class="card h-100">
               <div class="card-body">
-                <h4 class="mb-2">Send a message</h4>
+                <h4 class="mb-2">Kirim Pesan</h4>
                 <p class="mb-6">
-                  If you would like to discuss anything related to payment, account, licensing,<br
-                    class="d-none d-lg-block" />
-                  partnerships, or have pre-sales questions, you’re at the right place.
+                  Jika Anda ingin berdiskusi terkait penggunaan SantriNexus, bantuan teknis, pembelian kartu RFID/QR,
+                  kemitraan, atau pertanyaan lainnya, silakan isi formulir berikut.
                 </p>
                 <form>
                   <div class="row g-4">
                     <div class="col-md-6">
-                      <label class="form-label" for="contact-form-fullname">Full Name</label>
-                      <input type="text" class="form-control" id="contact-form-fullname" placeholder="john" />
+                      <label class="form-label" for="contact-form-fullname">Nama Lengkap</label>
+                      <input type="text" class="form-control" id="contact-form-fullname"
+                        placeholder="Ahmad Fauzi" />
                     </div>
                     <div class="col-md-6">
                       <label class="form-label" for="contact-form-email">Email</label>
                       <input type="text" id="contact-form-email" class="form-control"
-                        placeholder="johndoe@gmail.com" />
+                        placeholder="ahmadfauzi@gmail.com" />
                     </div>
                     <div class="col-12">
-                      <label class="form-label" for="contact-form-message">Message</label>
-                      <textarea id="contact-form-message" class="form-control" rows="7" placeholder="Write a message"></textarea>
+                      <label class="form-label" for="contact-form-message">Pesan</label>
+                      <textarea id="contact-form-message" class="form-control" rows="7" placeholder="Tulis pesan Anda di sini…"></textarea>
                     </div>
                     <div class="col-12">
                       <button type="submit" class="btn btn-primary">Send inquiry</button>

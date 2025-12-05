@@ -23,7 +23,7 @@
           <i class="icon-base ti tabler-menu-2 icon-lg align-middle text-heading fw-medium"></i>
         </button>
         <!-- Mobile menu toggle: End-->
-        <a href="{{ url('/') }}" class="app-brand-link">
+        <a href="{{ url('front-pages/landing') }}" class="app-brand-link">
           <span class="app-brand-logo demo">@include('_partials.macros')</span>
           <span class="app-brand-text demo menu-text fw-bold ms-2 ps-1">{{ config('variables.templateName') }}</span>
         </a>
@@ -38,19 +38,20 @@
         </button>
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a class="nav-link fw-medium" aria-current="page" href="{{ url('/') }}#landingHero">Home</a>
+            <a class="nav-link fw-medium" aria-current="page"
+              href="{{ url('front-pages/landing') }}#landingHero">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-medium" href="{{ url('/') }}#homeFitur">Fitur</a>
+            <a class="nav-link fw-medium" href="{{ url('front-pages/landing') }}#landingFeatures">Features</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-medium" href="{{ url('/') }}#homeTim">Tim</a>
+            <a class="nav-link fw-medium" href="{{ url('front-pages/landing') }}#landingTeam">Team</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-medium" href="{{ url('/') }}#landingFAQ">FAQ</a>
+            <a class="nav-link fw-medium" href="{{ url('front-pages/landing') }}#landingFAQ">FAQ</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-medium" href="{{ url('/') }}#landingContact">Contact
+            <a class="nav-link fw-medium" href="{{ url('front-pages/landing') }}#landingContact">Contact
               us</a>
           </li>
           <li class="nav-item mega-dropdown {{ $activeClass }}">
@@ -71,25 +72,25 @@
                   </div>
                   <ul class="nav flex-column">
                     <li class="nav-item {{ $currentRouteName === 'front-pages-pricing' ? 'active' : '' }}">
-                      <a class="nav-link mega-dropdown-link" href="{{ url('/') }}">
+                      <a class="nav-link mega-dropdown-link" href="{{ url('front-pages/pricing') }}">
                         <i class="icon-base ti tabler-circle me-1 icon-12px"></i>
                         <span>Pricing</span>
                       </a>
                     </li>
                     <li class="nav-item {{ $currentRouteName === 'front-pages-payment' ? 'active' : '' }}">
-                      <a class="nav-link mega-dropdown-link" href="{{ url('/') }}">
+                      <a class="nav-link mega-dropdown-link" href="{{ url('front-pages/payment') }}">
                         <i class="icon-base ti tabler-circle me-1 icon-12px"></i>
                         <span>Payment</span>
                       </a>
                     </li>
                     <li class="nav-item {{ $currentRouteName === 'front-pages-checkout' ? 'active' : '' }}">
-                      <a class="nav-link mega-dropdown-link" href="{{ url('/') }}">
+                      <a class="nav-link mega-dropdown-link" href="{{ url('front-pages/checkout') }}">
                         <i class="icon-base ti tabler-circle me-1 icon-12px"></i>
                         <span>Checkout</span>
                       </a>
                     </li>
                     <li class="nav-item {{ $currentRouteName === 'front-pages-help-center' ? 'active' : '' }}">
-                      <a class="nav-link mega-dropdown-link" href="{{ url('/') }}">
+                      <a class="nav-link mega-dropdown-link" href="{{ url('front-pages/help-center') }}">
                         <i class="icon-base ti tabler-circle me-1 icon-12px"></i>
                         <span>Help Center</span>
                       </a>
@@ -106,55 +107,60 @@
                   </div>
                   <ul class="nav flex-column">
                     <li class="nav-item">
-                      <a class="nav-link mega-dropdown-link" href="{{ url('/') }}" target="_blank">
+                      <a class="nav-link mega-dropdown-link" href="{{ url('/auth/login-basic') }}" target="_blank">
                         <i class="icon-base ti tabler-circle me-1 icon-12px"></i>
                         Login (Basic)
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link mega-dropdown-link" href="{{ url('/') }}" target="_blank">
+                      <a class="nav-link mega-dropdown-link" href="{{ url('/auth/login-cover') }}" target="_blank">
                         <i class="icon-base ti tabler-circle me-1 icon-12px"></i>
                         Login (Cover)
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link mega-dropdown-link" href="{{ url('/') }}" target="_blank">
+                      <a class="nav-link mega-dropdown-link" href="{{ url('/auth/register-basic') }}" target="_blank">
                         <i class="icon-base ti tabler-circle me-1 icon-12px"></i>
                         Register (Basic)
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link mega-dropdown-link" href="{{ url('/') }}" target="_blank">
+                      <a class="nav-link mega-dropdown-link" href="{{ url('/auth/register-cover') }}" target="_blank">
                         <i class="icon-base ti tabler-circle me-1 icon-12px"></i>
                         Register (Cover)
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link mega-dropdown-link" href="{{ url('/') }}" target="_blank">
+                      <a class="nav-link mega-dropdown-link" href="{{ url('/auth/register-multisteps') }}"
+                        target="_blank">
                         <i class="icon-base ti tabler-circle me-1 icon-12px"></i>
                         Register (Multi-steps)
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link mega-dropdown-link" href="{{ url('/') }}" target="_blank">
+                      <a class="nav-link mega-dropdown-link" href="{{ url('/auth/forgot-password-basic') }}"
+                        target="_blank">
                         <i class="icon-base ti tabler-circle me-1 icon-12px"></i>
                         Forgot Password (Basic)
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link mega-dropdown-link" href="{{ url('/') }}" target="_blank">
+                      <a class="nav-link mega-dropdown-link" href="{{ url('/auth/forgot-password-cover') }}"
+                        target="_blank">
                         <i class="icon-base ti tabler-circle me-1 icon-12px"></i>
                         Forgot Password (Cover)
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link mega-dropdown-link" href="{{ url('/') }}" target="_blank">
+                      <a class="nav-link mega-dropdown-link" href="{{ url('/auth/reset-password-basic') }}"
+                        target="_blank">
                         <i class="icon-base ti tabler-circle me-1 icon-12px"></i>
                         Reset Password (Basic)
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link mega-dropdown-link" href="{{ url('/') }}" target="_blank">
+                      <a class="nav-link mega-dropdown-link" href="{{ url('/auth/reset-password-cover') }}"
+                        target="_blank">
                         <i class="icon-base ti tabler-circle me-1 icon-12px"></i>
                         Reset Password (Cover)
                       </a>
@@ -171,49 +177,56 @@
                   </div>
                   <ul class="nav flex-column">
                     <li class="nav-item">
-                      <a class="nav-link mega-dropdown-link" href="{{ url('/') }}" target="_blank">
+                      <a class="nav-link mega-dropdown-link" href="{{ url('/pages/misc-error') }}" target="_blank">
                         <i class="icon-base ti tabler-circle me-1 icon-12px"></i>
                         Error
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link mega-dropdown-link" href="{{ url('/') }}" target="_blank">
+                      <a class="nav-link mega-dropdown-link" href="{{ url('/pages/misc-under-maintenance') }}"
+                        target="_blank">
                         <i class="icon-base ti tabler-circle me-1 icon-12px"></i>
                         Under Maintenance
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link mega-dropdown-link" href="{{ url('/') }}" target="_blank">
+                      <a class="nav-link mega-dropdown-link" href="{{ url('/pages/misc-comingsoon') }}"
+                        target="_blank">
                         <i class="icon-base ti tabler-circle me-1 icon-12px"></i>
                         Coming Soon
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link mega-dropdown-link" href="{{ url('/') }}" target="_blank">
+                      <a class="nav-link mega-dropdown-link" href="{{ url('/pages/misc-not-authorized') }}"
+                        target="_blank">
                         <i class="icon-base ti tabler-circle me-1 icon-12px"></i>
                         Not Authorized
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link mega-dropdown-link" href="{{ url('/') }}" target="_blank">
+                      <a class="nav-link mega-dropdown-link" href="{{ url('/auth/verify-email-basic') }}"
+                        target="_blank">
                         <i class="icon-base ti tabler-circle me-1 icon-12px"></i>
                         Verify Email (Basic)
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link mega-dropdown-link" href="{{ url('/') }}" target="_blank">
+                      <a class="nav-link mega-dropdown-link" href="{{ url('/auth/verify-email-cover') }}"
+                        target="_blank">
                         <i class="icon-base ti tabler-circle me-1 icon-12px"></i>
                         Verify Email (Cover)
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link mega-dropdown-link" href="{{ url('/') }}" target="_blank">
+                      <a class="nav-link mega-dropdown-link" href="{{ url('/auth/two-steps-basic') }}"
+                        target="_blank">
                         <i class="icon-base ti tabler-circle me-1 icon-12px"></i>
                         Two Steps (Basic)
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link mega-dropdown-link" href="{{ url('/') }}" target="_blank">
+                      <a class="nav-link mega-dropdown-link" href="{{ url('/auth/two-steps-cover') }}"
+                        target="_blank">
                         <i class="icon-base ti tabler-circle me-1 icon-12px"></i>
                         Two Steps (Cover)
                       </a>
@@ -270,8 +283,6 @@
           </li>
           <!-- / Style Switcher-->
         @endif
-
-        <!-- navbar button: Start -->
         @if (Auth::check())
           <li>
             <a class="btn btn-primary" href="{{ route('dashboard') }}">
